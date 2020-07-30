@@ -3,20 +3,21 @@ package hiber.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="cars")
+@Table(name = "cars")
 public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    
-    @Column(name="name")
+
+    @Column(name = "name")
     private String name;
 
-    @Column(name="series")
+    @Column(name = "series")
     private int series;
 
-    public Car() {}
+    public Car() {
+    }
 
     public Car(String name, int series) {
         this.name = name;
